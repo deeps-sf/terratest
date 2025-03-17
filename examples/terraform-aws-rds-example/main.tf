@@ -121,7 +121,7 @@ resource "aws_db_instance" "example" {
   password               = var.password
   instance_class         = var.instance_class
   allocated_storage      = var.allocated_storage
-  skip_final_snapshot    = true
+  skip_final_snapshot    = false
   license_model          = var.license_model
   db_subnet_group_name   = aws_db_subnet_group.example.id
   vpc_security_group_ids = [aws_security_group.db_instance.id]
