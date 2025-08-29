@@ -26,6 +26,9 @@ resource "google_compute_instance" "example" {
     network = "default"
     access_config {}
   }
+  metadata = {
+    block-project-ssh-keys = true
+  }
 }
 
 # website::tag::3:: Allow the user to pass in a custom name for the instance
